@@ -16,7 +16,8 @@
 
 <body>
     <header>
-        <div class="container-grid header">
+        <div class="container-fluid header">
+            <a href="#" class="link-menu-barras" onclick="mostrarMenu()"><img class="teste" src="../GameMania/icons/bars-solid.svg" alt="icone do menu de barras"></a>
             <a href="index.html"><img class="logomarca" src="../GameMania/logo/logo2.png" alt="Logo da Game Mania"></a>
             <form class="busca">
                 <input type="search" id="busca" placeholder="O que você está procurando?" name="q">
@@ -29,23 +30,16 @@
             <img class="carrinho-de-compra" src="../GameMania/icons/carrinho-de-compras.png" alt="Carrinho de compras">
         </div>
     </header>
-    <section class="container-grid menu">
-        <nav class="navegacao-menu">
-            <a class="link-menu categorias" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img class="menu-barra" src="../GameMania/icons/menu.png" style="
-                width:22px"> Todos as categorias
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                    <a class="dropdown-item" href="acessorio.html">Acessórios</a>
-                </li>
-                <li><a class="dropdown-item" href="videogame.html">Games</a></li>
-            </ul>
+    <section class="container-fluid menu">
+        <nav id="menu" class="navegacao-menu">
+            <a class="link-menu" href="acessorio.html">Acessórios</a>
             <a class="link-menu" href="lancamento.html">Lançamentos</a>
             <a class="link-menu" href="game.html">PC Gamer</a>
             <a class="link-menu" href="jogo.html">Jogos</a>
         </nav>
+
     </section>
-    <section class="container-grid departamento-lancamento">
+    <section class="container-fluid departamento-lancamento">
         <h2 class="titulo-departamento">Lançamentos</h2>
         <ul class="lista-departamento">
             <li>
@@ -98,16 +92,29 @@
         <div class="contato">
             <h4 class="opcao-rodape">Email</h4>
             <p>gamemania@gmail.com</p>
-            <a href="https://twitter.com/i/flow/login" target="_blank"><img class="redes-sociais" src="../GameMania/icons/twitter.png"></a>
-            <a href="https://pt-br.facebook.com/" target="_blank"><img class="redes-sociais" src="../GameMania/icons/facebook.png"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img class="redes-sociais" src="../GameMania/icons/instagram.png"></a>
-            <a href="https://www.linkedin.com/" target="_blank"><img class="redes-sociais" src="../GameMania/icons/linkedin 1.png"></a>
+            <div class="social-rede">
+                <a href="https://twitter.com/i/flow/login" target="_blank"><img class="redes-sociais" src="../GameMania/icons/twitter.png"></a>
+                <a href="https://pt-br.facebook.com/" target="_blank"><img class="redes-sociais" src="../GameMania/icons/facebook.png"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img class="redes-sociais" src="../GameMania/icons/instagram.png"></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img class="redes-sociais" src="../GameMania/icons/linkedin 1.png"></a>
+            </div>
         </div>
     </div>
     <footer class="footer">
         <p class="direitos-reservados">&copy; 2021 - Todos os direitos reservados</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        let menu = document.getElementById("menu");
+
+        function mostrarMenu() {
+            if (getComputedStyle(menu).display == "none") {
+                menu.style.display = "flex";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
