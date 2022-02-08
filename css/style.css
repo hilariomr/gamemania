@@ -51,7 +51,7 @@
         border: none;
     }
     
-    button {
+    .botao-lupa {
         position: absolute;
         top: 0;
         right: 0;
@@ -138,18 +138,38 @@
     
     .lista-departamento {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
         list-style: none;
     }
     
     .imagem-departamento {
-        width: 230px;
-        height: 267.53px;
+        padding-left: 38px;
     }
     
-    .imagem-lancamento {
-        width: 170px;
-        height: 310.05px;
+    .content-news {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .content-news {
+        margin: 20px;
+    }
+    
+    .card-img-top {
+        height: 14em;
+    }
+    
+    .card-body {
+        background-color: black;
+        color: #FFFFFF;
+    }
+    
+    .value-text {
+        color: #A30015;
+        font-weight: bolder;
+        font-size: 28px;
     }
     
     .rodape {
@@ -172,19 +192,44 @@
     
     .atendimento,
     .endereco,
-    .contato {
+    .contato,
+    .cadastro-email {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
     
-    .footer p {
+    .footer {
         background-color: #1E2019;
+        display: flex;
+    }
+    
+    .footer p {
         color: #FFFFFF;
         margin: auto;
         height: 40px;
         padding: 10px;
+    }
+    
+    .cadastro-email h2 {
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    
+    #campo-email {
+        width: 80%;
+        height: 40px;
+    }
+    
+    .testes {
+        display: flex;
+    }
+    
+    .botao-cadastrar {
+        background-color: #6f42c1;
+        color: #FFFFFF;
+        border-radius: 20px;
     }
     
     @media screen and (max-width: 1200px) {
@@ -233,12 +278,6 @@
         }
         .titulo-departamento {
             font-size: 22px;
-        }
-        .lista-departamento {
-            display: flex;
-            align-content: center;
-            flex-flow: row wrap;
-            justify-content: space-between;
         }
         .rodape {
             display: flex;
