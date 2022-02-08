@@ -254,6 +254,9 @@
             top: 160px;
             right: 0;
         }
+        .menu-ativo {
+            display: flex;
+        }
         .area-login,
         .carrinho-de-compra,
         .frete-pagamento {

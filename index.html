@@ -12,12 +12,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     </style>
+    <script src="../GameMania/jquery.js"></script>
 </head>
 
 <body onload="renderizarProdutos()">
     <header>
         <div class="container-fluid header">
-            <a href="#" class="link-menu-barras" onclick="mostrarMenu()"><img class="teste" src="../GameMania/icons/bars-solid.svg" alt="icone do menu de barras"></a>
+            <a href="#" id="barras-menu" class="link-menu-barras"><img class="teste" src="../GameMania/icons/bars-solid.svg" alt="icone do menu de barras"></a>
             <a href="index.html"><img class="logomarca" src="../GameMania/logo/logo2.png" alt="Logo da Game Mania"></a>
             <form class="busca">
                 <input type="search" id="busca" placeholder="O que você está procurando?" name="q">

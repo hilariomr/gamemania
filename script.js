@@ -1,10 +1,29 @@
-let menu = document.getElementById("menu");
+//menu hamburguer feito em JQuery
+$(document).ready(function() {
+    $("#barras-menu").click(function() {
 
+        $("#menu").toggleClass("menu-ativo")
+
+        /*  if ($("#menu").hasClass("menu-ativo")) {
+             $("#menu").removeClass("menu-ativo")
+         } else {
+             $("#menu").addClass("menu-ativo")
+         } */
+    })
+})
+
+
+
+
+// menu hamburguer feito em JS puro
 function mostrarMenu() {
-    if (getComputedStyle(menu).display == "none") {
-        menu.style.display = "flex";
-    } else {
+
+    let menu = document.getElementById("menu");
+
+    if (getComputedStyle(menu).display != "none") {
         menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
     }
 }
 
